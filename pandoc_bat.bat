@@ -1,12 +1,11 @@
 @echo off
-REM è¤‡æ•°ã®Wordãƒ•ã‚¡ã‚¤ãƒ«ï¼ˆ.docxï¼‰ã‚’Markdownï¼ˆ.mdï¼‰ã«å¤‰æ›ã™ã‚‹ãƒãƒƒãƒ
-REM å‰æï¼špandocãŒã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã•ã‚Œã¦ã„ã‚‹ã“ã¨
-REM pandocå…¬å¼ã‚µã‚¤ãƒˆã€€https://pandoc.org/installing.html
-REM pandoc-3.7.0.2-windows-x86_64.msiã‚’ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã—ã¦ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
-REM ãƒãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«ã®å½¢å¼ã¯ANSIï¼ˆShift_JISï¼‰ãŒç„¡é›£ã€‚UTF-8ã ã¨ã€ä½™è¨ˆãªç©ºç™½ã‚„ãƒãƒƒã‚¯ã‚¹ãƒ©ãƒƒã‚·ãƒ¥ãŒå…¥ã£ã¦å‹•ã‹ãªã„å¯èƒ½æ€§ãŒã‚ 
- ã‚‹ã€‚
+REM •¡”‚ÌWordƒtƒ@ƒCƒ‹i.docxj‚ðMarkdowni.mdj‚É•ÏŠ·‚·‚éƒoƒbƒ`
+REM ‘O’ñFpandoc‚ªƒCƒ“ƒXƒg[ƒ‹‚³‚ê‚Ä‚¢‚é‚±‚Æ
+REM pandocŒöŽ®ƒTƒCƒg@https://pandoc.org/installing.html
+REM pandoc-3.7.0.2-windows-x86_64.msi‚ðƒ_ƒEƒ“ƒ[ƒh‚µ‚ÄƒCƒ“ƒXƒg[ƒ‹
+REM ƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ÌŒ`Ž®‚ÍANSIiShift_JISj‚ª–³“ïBUTF-8‚¾‚ÆA—]Œv‚È‹ó”’‚âƒoƒbƒNƒXƒ‰ƒbƒVƒ…‚ª“ü‚Á‚Ä“®‚©‚È‚¢‰Â”\«‚ª‚ ‚éB
 
-REM ã“ã®ãƒãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«ã«å¤‰æ›ã—ãŸã„.docxãƒ•ã‚¡ã‚¤ãƒ«ã‚’ãƒ‰ãƒ©ãƒƒã‚°ï¼†ãƒ‰ãƒ­ãƒƒãƒ—ã—ã¦ä½¿ç”¨ã—ã¦ãã ã•ã„
+REM ‚±‚Ìƒoƒbƒ`ƒtƒ@ƒCƒ‹‚É•ÏŠ·‚µ‚½‚¢.docxƒtƒ@ƒCƒ‹‚ðƒhƒ‰ƒbƒO•ƒhƒƒbƒv‚µ‚ÄŽg—p‚µ‚Ä‚­‚¾‚³‚¢
 
 for %%f in (%*) do (
     pandoc "%%f" -f docx -t gfm --wrap=preserve -o "%%~dpnf.md"
